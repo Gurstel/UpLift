@@ -32,7 +32,27 @@ def questionsPage():
 
 @app.route('/friends')
 def friendPage():
-    return render_template("friends.html")
+    if 'friends' not in session:
+        session['friends'] = []
+
+    friendUsername = request.args.get('friendUsername')
+    if friendUsername is not None:
+        # add the friend
+        session['friends'] = session['friends'] + [friendUsername]
+
+
+    if len(session['friends']) == 0:
+        fmessage = "Add your first friend!"
+    else:
+        fmessage = "Here are your friends:" 
+
+    # if button
+
+    return render_template(
+        "friends.html",
+        fmessage = fmessage,
+        friends = session['friends']
+    )
 
 @app.route('/quotes')
 def quotePage():

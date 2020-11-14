@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 <style>
-    body {
-      background-image: url('https://windows10wall.com/wp-content/uploads/2014/08/beach-nice-background-wallpaper.jpg');
-      background-repeat:no-repeat;
-      background-size: cover;
-    }
-    </style>
-<div class="alert alert-light" role="alert">
-    {{quotes}}
+  body {
+    background-image: url('https://windows10wall.com/wp-content/uploads/2014/08/beach-nice-background-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-8 alert alert-success align-self-center text-center" role="alert">
+      <h1>{{quotes}}</h1>
+    </div>
   </div>
+</div>
 {% endblock %}
-
