@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="input-group mb-3">
+    <div action="/friends" class="input-group-prepend">
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="has been">
+    Add Friend
+</button>
+    </div>
+    <input type="text" class="form-control" placeholder="Add friends by username" name="friends" aria-label="Example text with button addon" aria-describedby="button-addon1">
+  </div>
+  
+  {% endblock %}
