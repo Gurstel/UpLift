@@ -34,10 +34,6 @@ questions["conversation"] = {
             {
                 "answer": "My work / school",
                 "nextQuestion": 7
-            },
-            {
-                "answer": "My community",
-                "nextQuestion": 8
             }
         ]
 
@@ -47,16 +43,102 @@ questions["conversation"] = {
         "answers": [
             {
                     "answer": "Stresses and problems",
-                    "nextQuestion": 9
+                    "trait": "Short term stress"
+                    
             },
             {
-                "answer": "High moments of the week",
-                "nextQuestion": 10
+                    "answer": "High Moments of the wekk",
+                    "trait": "optimisitc Happiness"
             }
         ]
     },
     4: {
-        "question": "What is your social life like right now?"
+        "question": "What is your social life like right now?",
+        "answers": [
+            {
+                    "answer": "A lot of friends, but none of them close",
+                    "trait": "Looking for close conversations"
+            },
+             {
+                    "answer": "Few close friends that I can rely and confide in, but want to create new ones",
+                    "trait": "Looking for close conversations"
+            },
+            {
+                    "answer": "Not many friends/people to talk to",
+                    "trait": "Introverted and looking for connections"
+            },
+        ]
+    },
+    5: {
+        "question": "What about yourself would you talk about?",
+        "answers": [
+            {
+                    "answer": "Stresses and problems",
+                    "trait": "Long term stress"
+            },
+             {
+                    "answer": "Outlok and insights",
+                    "trait": "Seeks Advice"
+            },
+        ]
+    },
+    6: {
+        "question": "What about your family  would you talk about?",
+        "answers": [
+            {
+                    "answer": "Stresses and problems",
+                    "trait": "Long term stress"
+            },
+             {
+                    "answer": "How you help each other out",
+                    "trait": "Gives Advice"
+            },
+        ]
+    },
+    7: {
+        "question": "What about your work would you talk about?",
+        "answers": [
+            {
+                    "answer": "What and how the job is",
+                    "trait": "In the moment"
+            },
+             {
+                    "answer": "What and how you want the job to be",
+                    "trait": "Looks forward"
+            },
+        ]
     }
 }
+
+
+
+questions["corona"] = {
+    1: {
+        "question": "Have you been affected by Corona Virus?",
+        "answers": [
+            {
+                    "answer": "Yes",
+                    "nextQuestion": 2
+            },
+            {
+                "answer": "No",
+                "trait": "No COVID"
+            },
+        ]
+    },
+    2: {
+        "question": "How has it affected your life?",
+        "answers": [
+            {
+                "answer": "Sickened or killed a loved one",
+                "trait": "Needs Corona Relief"
+            },
+            {
+                "answer": "Makes me less social",
+                "trait": "Lonely"
+            }
+        ]
+    }
+}
+
 

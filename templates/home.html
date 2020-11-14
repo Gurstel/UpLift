@@ -7,20 +7,34 @@
                 Schedule
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">1st session</li>
-                <li class="list-group-item">2nd session</li>
-                <li class="list-group-item">3nd session</li>
+                <li class="list-group-item">No groups joined yet</li>
+                <li class="list-group-item"> </li>
+                <li class="list-group-item"> </li>
             </ul>
         </div>
 
         <div class="card col">
             <div class="card-header">
-               Daily Questions
+                Daily Questions
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">1st session</li>
-                <li class="list-group-item">2nd session</li>
-                <li class="list-group-item">3nd session</li>
+                <div class="alert alert-light" role="alert">
+                    How is your day going today on a scale from 1-10?
+                </div>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-danger">1</button>
+                        <button type="button" class="btn btn-danger">2</button>
+                        <button type="button" class="btn btn-danger">3</button>
+                        <button type="button" class="btn btn-warning">4</button>
+                        <button type="button" class="btn btn-warning">5</button>
+                        <button type="button" class="btn btn-warning">6</button>
+                        <button type="button" class="btn btn-warning">7</button>
+                        <button type="button" class="btn btn-success">8</button>
+                        <button type="button" class="btn btn-success">9</button>
+                        <button type="button" class="btn btn-success">10</button>
+
+                    </div>
             </ul>
         </div>
 
@@ -29,9 +43,18 @@
                 Recommended Groups
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">1st session</li>
-                <li class="list-group-item">2nd session</li>
-                <li class="list-group-item">3nd session</li>
+                {% if traitStress %}
+                <div class="alert alert-light" role="alert">
+                    How are you dealing with stress?<br>7:00 AM Nov. 13, 2020<br><a href="https://meet.google.com/cnmjlxkep5"
+                        class="btn btn-info">Join Group</a>
+                </div>
+                {% endif %}
+                {% if traitCovid %}
+                <div class="alert alert-light" role="alert">
+                    How are you coping with COVID?<br>9:00 PM Nov. 13, 2020<br><a href="https://meet.google.com/cnmjlxkep5"
+                        class="btn btn-info">Join Group</a>
+                </div>
+                {% endif %}
             </ul>
         </div>
     </div>

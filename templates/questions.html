@@ -3,13 +3,10 @@
 {% endblock %}
 {% block content %}
 <div class="card text-center">
-    <div class="card-header">
-      {{ questionCategory }} Question
-    </div>
     <div class="card-body">
       <h5 class="card-title">{{ question }}</h5>
      {% for answer in answers %} 
-     <a href="/questions/{{questionCategory}}" class="btn btn-primary">{{ answer["answer"] }}</a> 
+     <a href="/questions/{{ questionCategoryIndex }}/{{ questionIndex }}/{{ loop.index - 1 }}" class="btn btn-primary">{{ answer["answer"] }}</a> 
      {% endfor %}
     </div>
   </div>
