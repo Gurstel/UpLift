@@ -1,12 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="input-group mb-3">
-    <div action="/friends" class="input-group-prepend">
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="has been">
-    Add Friend
-</button>
+<form action="/friends">
+    <div class="input-group" role="group">
+        <div class="input-group-prepend">
+            <button type="submit" class="btn btn-primary">Add Friend</button>
+        </div>
+        <input type="text" class="form-control" id="friendUsername" name="friendUsername"
+            placeholder="Friend username...">
     </div>
-    <input type="text" class="form-control" placeholder="Add friends by username" name="friends" aria-label="Example text with button addon" aria-describedby="button-addon1">
-  </div>
-  
-  {% endblock %}
+</form>
+
+
+<p>{{ fmessage }}</p>
+<ul class="list-group">
+    {% for friend in friends %}
+    <li class="list-group-item">{{friend}} <span class="badge badge-light">Request Pending</span></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
