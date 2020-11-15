@@ -1,7 +1,12 @@
+<!-- Login page -->
 {% extends "base.html" %}
+
+<!-- Overwrite NavBar to remove links -->
 {% block navbarlinks %}
 {% endblock %}
+
 {% block content %}
+<!-- Login form -->
 <form action="/login">
     <div class="form-group">
       <label for="email">Email address</label>

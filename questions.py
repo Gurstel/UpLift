@@ -1,5 +1,6 @@
 from collections import OrderedDict
 
+# Create a map from categories to questions
 questions = OrderedDict()
 
 questions["conversation"] = {
@@ -109,8 +110,6 @@ questions["conversation"] = {
         ]
     }
 }
-
-
 
 questions["corona"] = {
     1: {

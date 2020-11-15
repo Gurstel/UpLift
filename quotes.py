@@ -1,6 +1,6 @@
 import random
 
-#def randomQuote():
+# Create list of quotes
 quotes = ["You're an awesome friend",
 "You're a gift to those around you",
 "You're a smart cookie",

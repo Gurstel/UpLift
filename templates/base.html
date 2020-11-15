@@ -1,3 +1,4 @@
+<!-- Base template to be used by all pages in Web App -->
 <!doctype html>
 <html lang="en">
 
@@ -14,12 +15,14 @@
 </head>
 
 <body>
+    <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="navbar-brand" >UpLift</div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Allow overriding of NavBar -->
         {% block navbarlinks %}
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -44,8 +47,10 @@
         {% endblock %}
     </nav>
 
+    <!-- Allow adding content to the body -->
     {% block content %}{% endblock %}
 
+    <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

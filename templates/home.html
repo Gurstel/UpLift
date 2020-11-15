@@ -1,11 +1,15 @@
+<!-- Home Page -->
 {% extends "base.html" %}
 {% block content %}
+
 <div class="container">
     <div class="row">
+        <!-- Schedule Section -->
         <div class="card col">
             <div class="card-header">
                 Schedule
             </div>
+            <!-- List of groups -->
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">No groups joined yet</li>
                 <li class="list-group-item"> </li>
@@ -13,6 +17,7 @@
             </ul>
         </div>
 
+        <!-- Daily Question Section -->
         <div class="card col">
             <div class="card-header">
                 Daily Questions
@@ -38,10 +43,12 @@
             </ul>
         </div>
 
+        <!-- Recommended Group Section -->
         <div class="card col">
             <div class="card-header">
                 Recommended Groups
             </div>
+            <!-- Use traits to determine which groups to recommend -->
             <ul class="list-group list-group-flush">
                 {% if traitStress %}
                 <div class="alert alert-light" role="alert">

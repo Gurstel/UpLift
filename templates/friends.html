@@ -1,5 +1,7 @@
+<!-- Friends page -->
 {% extends "base.html" %}
 {% block content %}
+<!-- Form to add friends -->
 <form action="/friends">
     <div class="input-group" role="group">
         <div class="input-group-prepend">
@@ -10,7 +12,7 @@
     </div>
 </form>
 
-
+<!-- List of friends -->
 <p>{{ fmessage }}</p>
 <ul class="list-group">
     {% for friend in friends %}
